@@ -14,11 +14,7 @@ app.use(bodyParser.json());
 
 // Serve static files (e.g., uploaded images)
 app.use("/uploads", express.static("uploads"));
-app.use(cors({
-    origin: '*',  // Allow all domains
-    methods: ['GET', 'POST', 'PUT', 'DELETE'],
-    allowedHeaders: ['Content-Type', 'Authorization']
-}));
+
 // Root route
 app.get("/", (req, res) => {
     res.send("Welcome to the API!");
